@@ -128,7 +128,7 @@ const cerrarSesion=()=>{
 }
 
 const ingresoASaldo=()=>{
-    document.getElementById("agregarSaldo").style.display = "inherit";
+    // document.getElementById("agregarSaldo").style.display = "inherit";
     document.getElementById("opcionesCajero").style.display = "none";
 }    
 //opciones cajero--- agregar saldo
