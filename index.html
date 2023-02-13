@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE.CSS">
+    <title>Cajero</title>
+</head>
+<h1>BIENVENIDO</h1>
+<body>
+    <!-- ingreso cajero -->
+    <section id="Usuario">
+    <h2>Ingrese su Usuario</h2>
+    <h3>A continuación verificaremos sus credenciales</h3>
+    <div >
+        <label>Usuario<br/><input type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
+        <button id="boton" onclick="validandoUsuario()">validar</button>
+        <span class="correctoMensaje" id="correctoUsuario"></span>  
+    </div>
+    </section>
+    <section id ="clave">
+    <div class="contra">
+        
+        <div></div><label>Contraseña<br/><input type="password" id="password" placeholder="Ingrese su contraseña"></label>
+        <button id="boton" onclick="clave()">validar</button></div>
+        <span class="mensajeError" id="errorClave"></span>
+    
+</section>
+    <!-- ingreso cajero -->
+
+    <section id="opcionesCajero">
+    <div>
+        <h2>¿Qué desea hacer hoy?</h2>
+                <div class="botonesOpciones">
+                    <button onclick="verSaldo()">Ver saldo</button>
+                    <button onclick="ingresarSaldo ()">Ingresar saldo</button>
+                    <button onclick="retirarSaldo ()">Retirar dinero</button>
+                                    </div>
+                <div><button class="cerrarSesion" onclick="cerrarSesion()">cerrar sesión</button></div>
+            </div>
+            </section>
+            <!-- OPCIONES CAJERO // VER SALDO -->
+            <section id="verSaldo" class="card">
+                <h2>Su saldo actual es:</h2>
+                <span id="saldoCliente"></span>
+                <div><button class="atras" onclick="atras()">volver</button></div>
+            </section>
+
+            <!-- OPCIONES CAJERO // AGREGAR SALDO -->
+            <section id="agregarSaldo" >
+                <h2>¿Cuánto dinero quiere ingresar?</h2>
+                <div class="saldoDiferente">
+                    <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
+                    <button onclick="ingresarSaldo ()">validar</button>
+                </div>
+                <span class="mensajeError" id="alertaCupo"></span>
+                <span class="mensajeError" id="alertaOk"></span>
+                <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
+                        </section>
+
+                
+<!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
+<section id="saldoTotal" class="card">
+    <h2>Acabas de ingresar:</h2>
+    <span id="saldoIngresadoCliente">$</span>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
