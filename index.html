@@ -33,7 +33,7 @@
     <div>
         <h2>¿Qué desea hacer hoy?</h2>
                 <div class="botonesOpciones">
-                    <button onclick="verSaldo()">Ver saldo</button>
+                    <button onclick="verSaldo()">Ver saldo actual</button>
                     <button onclick="ingresarSaldo ()">Ingresar saldo</button>
                     <button onclick="retirarSaldo ()">Retirar dinero</button>
                                     </div>
@@ -55,8 +55,8 @@
                     <button class ="valida" onclick="ingresarSaldo()">validar ingreso</button>
                 </div>
                 <span class="mensajeError" id="alertaCupo"></span>
-                <span class="mensajeError" id="alertaOk"></span>
-                <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
+                <!-- <span class="mensajeError" id="alertaOk"></span> -->
+                <!-- <div><button class="atras" onclick="atrasSaldo()">volver</button></div> -->
                         </section>
 
                 
@@ -64,6 +64,7 @@
 <section id="saldoTotal" class="card">
     <h2>Saldo Actual:</h2>
     <span id="saldoIngresadoCliente">$</span>
+    <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
 </section>
     <script src="script.js"></script>
 </section>
