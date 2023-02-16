@@ -16,19 +16,21 @@
 <h1>BIENVENIDO</h1>
 
 <body class="text-bg-dark p-3">
+    
+
     <!-- ingreso cajero -->
     <section class="container" class="position-relative"  id="Usuario">
         <div class="position-absolute top-50 start-50 translate-middle">
         <div >
-            <label>Usuario<br /><input class="form-control" type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
+            <label>Usuario<br /><input type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
             <button class="btn btn-primary" id="boton" onclick="validandoUsuario()">validar</button>
             <span class="correctoMensaje" id="correctoUsuario"></span>
         </div>
     <!-- <section class="container"class="position-relative" id="clave"> -->
             <div id="clave">
-            <label>Contraseña<br /><input class="form-control" type="password" id="password"
+            <label>Contraseña<br /><input type="password" id="password"
                     placeholder="Ingrese su contraseña"></label>
-            <button class="btn btn-primary" id="boton" onclick="clave()">validar</button>
+            <button id="boton" onclick="clave()">validar</button>
         <span class="mensajeError" id="errorClave"></span>
         </div>
         </div>
@@ -47,14 +49,14 @@
         </div>
     </section>
     <!-- OPCIONES CAJERO // VER SALDO -->
-    <section id="verSaldo" class="card">
+    <section class="text-bg-dark p-3" id="verSaldo" class="card">
         <h2>Su saldo actual es:</h2>
         <span id="saldoCliente"></span>
         <div><button class="atras" onclick="atras()">volver</button></div>
     </section>
 
     <!-- OPCIONES CAJERO // AGREGAR SALDO -->
-    <section id="agregarSaldo">
+    <section class="text-bg-dark p-3"id="agregarSaldo">
         <h2>¿Cuánto dinero quiere ingresar?</h2>
         <div class="saldoDiferente">
             <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
@@ -69,7 +71,7 @@
 
 
     <!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
-    <section id="saldoTotal" class="card">
+    <section class="text-bg-dark p-3"id="saldoTotal" class="card">
         <h2>Saldo Actual:</h2>
         <span id="saldoIngresadoCliente">$</span>
         <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
