@@ -13,57 +13,63 @@
     <!--js-->
 
 </head>
-<h1>BIENVENIDO</h1>
+<h1 class="mb-5">BIENVENIDO</h1>
 
 <body class="text-bg-dark p-3">
-    
+
 
     <!-- ingreso cajero -->
-    <section class="container" class="position-relative"  id="Usuario">
+    <section class="container" class="position-relative" id="Usuario">
         <div class="position-absolute top-50 start-50 translate-middle">
-        <div >
-            <label>Usuario<br /><input type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
-            <button class="btn btn-primary" id="boton" onclick="validandoUsuario()">validar</button>
-            <span class="correctoMensaje" id="correctoUsuario"></span>
-        </div>
-    <!-- <section class="container"class="position-relative" id="clave"> -->
+            <div>
+                <label>Usuario<br /><input class="input-group-text" type="password" id="ingreseUsuario"
+                        placeholder="ingrese su usuario"></label>
+                <button class="btn btn-primary" id="boton" onclick="validandoUsuario()">validar</button>
+                <span class="correctoMensaje" id="correctoUsuario"></span>
+            </div>
+            <!-- <section class="container"class="position-relative" id="clave"> -->
             <div id="clave">
-            <label>Contraseña<br /><input type="password" id="password"
-                    placeholder="Ingrese su contraseña"></label>
-            <button id="boton" onclick="clave()">validar</button>
-        <span class="mensajeError" id="errorClave"></span>
-        </div>
+                <label>Contraseña<br /><input class="input-group-text" type="password" id="password"
+                        placeholder="Ingrese su contraseña"></label>
+                <button class="btn btn-primary" id="boton" onclick="clave()">validar</button>
+                <span class="mensajeError" id="errorClave"></span>
+            </div>
         </div>
     </section>
     <!-- ingreso cajero -->
 
     <section id="opcionesCajero">
-        <div>
-            <h2>¿Qué desea hacer hoy?</h2>
-            <div class="botonesOpciones">
-                <button onclick="verSaldo()">Ver saldo actual</button>
-                <button onclick="ingresarSaldo ()">Ingresar saldo</button>
-                <button onclick="retirarSaldo ()">Retirar dinero</button>
+        <div >
+            <!-- <h2>¿Qué desea hacer hoy?</h2> -->
+            <div class="botonesOpciones" >
+                <button class="btn btn-primary" onclick="verSaldo()">Ver saldo actual</button>
+                <button class="btn btn-primary" onclick="ingresarSaldo ()">Ingresar saldo</button>
+                <button class="btn btn-primary" onclick="retirarSaldo ()">Retirar dinero</button>
             </div>
-            <div><button class="cerrarSesion" onclick="cerrarSesion()">cerrar sesión</button></div>
+            <div class="position-absolute top-50 start-50">
+                <button class="btn btn-primary" class="cerrarSesion" onclick="cerrarSesion()">cerrar sesión</button>
+            </div>
         </div>
     </section>
     <!-- OPCIONES CAJERO // VER SALDO -->
     <section class="text-bg-dark p-3" id="verSaldo" class="card">
         <h2>Su saldo actual es:</h2>
         <span id="saldoCliente"></span>
-        <div><button class="atras" onclick="atras()">volver</button></div>
+        <div class="position-absolute top-50 start-50">
+            <button class="btn btn-primary" class="atras" onclick="atras()">volver</button></div>
     </section>
 
     <!-- OPCIONES CAJERO // AGREGAR SALDO -->
-    <section class="text-bg-dark p-3"id="agregarSaldo">
-        <h2>¿Cuánto dinero quiere ingresar?</h2>
-        <div class="saldoDiferente">
-            <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
-            <button class="valida" onclick="ingresarSaldo()">validar ingreso</button>
-            <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
-
+    <section class="text-bg-dark p-3" id="agregarSaldo">
+        <h2 class="mb-4">¿Cuánto dinero quiere ingresar?</h2>
+        <div class="grid gap-3" class="saldoDiferente">
+            <input  class="p-2 g-col-6" class="input-group-text" type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
+            <button  class="btn btn-primary" , class="valida" onclick="ingresarSaldo()">validar ingreso</button>
         </div>
+            <div class="position-absolute top-50 start-50">
+                <button class="btn btn-primary btn-sm" class="atras" onclick="atrasSaldo()">volver</button>
+            </div>
+
         <span class="mensajeError" id="alertaCupo"></span>
         <!-- <span class="mensajeError" id="alertaOk"></span> -->
         <!-- <div><button class="atras" onclick="atrasSaldo()">volver</button></div> -->
@@ -71,13 +77,17 @@
 
 
     <!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
-    <section class="text-bg-dark p-3"id="saldoTotal" class="card">
+    <section class="text-bg-dark p-3" id="saldoTotal" class="card">
         <h2>Saldo Actual:</h2>
         <span id="saldoIngresadoCliente">$</span>
-        <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
+        <div class="position-absolute top-50 start-50">
+            <button class="btn btn-primary btn-sm" class="atras" onclick="atrasSaldo()">volver</button>
+        </div>
     </section>
     <script src="script.js"></script>
     </section>
+
+
 
     <!-- OPCIONES CAJERO // RETIRAR SALDO -->
     <!-- <section id="retirarSaldo" class="card">
