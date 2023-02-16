@@ -166,6 +166,7 @@ const atrasSaldo=()=>{
         const mensajeUsuario = document.getElementById ("alertaCupo");
         mensajeUsuario.innerHTML = "";
         mensajeUsuario.appendChild (mensajeError);
+        
    
             }
         else {
