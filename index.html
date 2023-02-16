@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,86 @@
     <link rel="stylesheet" href="STYLE.CSS">
     <title>Cajero</title>
     <!--bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--js-->
-    
+
 </head>
 <h1>BIENVENIDO</h1>
-<body>
+
+<body class="text-bg-dark p-3">
     <!-- ingreso cajero -->
-    <section id="Usuario">
-    <h2>Ingrese su Usuario</h2>
-    <h3>A continuación verificaremos sus credenciales</h3>
-    <div >
-        <label>Usuario<br/><input type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
-        <button class="btn btn-primary" id="boton" onclick="validandoUsuario()">validar</button>
-        <span class="correctoMensaje" id="correctoUsuario"></span>  
-    </div>
-    </section>
-    <section id ="clave">
-    <div class="contra">
-        
-        <div></div><label>Contraseña<br/><input type="password" id="password" placeholder="Ingrese su contraseña"></label>
-        <button id="boton" onclick="clave()">validar</button></div>
+    <section class="container" class="position-relative"  id="Usuario">
+        <div class="position-absolute top-50 start-50 translate-middle">
+        <div >
+            <label>Usuario<br /><input class="form-control" type="password" id="ingreseUsuario" placeholder="ingrese su usuario"></label>
+            <button class="btn btn-primary" id="boton" onclick="validandoUsuario()">validar</button>
+            <span class="correctoMensaje" id="correctoUsuario"></span>
+        </div>
+    <!-- <section class="container"class="position-relative" id="clave"> -->
+            <div id="clave">
+            <label>Contraseña<br /><input class="form-control" type="password" id="password"
+                    placeholder="Ingrese su contraseña"></label>
+            <button class="btn btn-primary" id="boton" onclick="clave()">validar</button>
         <span class="mensajeError" id="errorClave"></span>
-    
-</section>
+        </div>
+        </div>
+    </section>
     <!-- ingreso cajero -->
 
     <section id="opcionesCajero">
-    <div>
-        <h2>¿Qué desea hacer hoy?</h2>
-                <div class="botonesOpciones">
-                    <button onclick="verSaldo()">Ver saldo actual</button>
-                    <button onclick="ingresarSaldo ()">Ingresar saldo</button>
-                    <button onclick="retirarSaldo ()">Retirar dinero</button>
-                                    </div>
-                <div><button class="cerrarSesion" onclick="cerrarSesion()">cerrar sesión</button></div>
+        <div>
+            <h2>¿Qué desea hacer hoy?</h2>
+            <div class="botonesOpciones">
+                <button onclick="verSaldo()">Ver saldo actual</button>
+                <button onclick="ingresarSaldo ()">Ingresar saldo</button>
+                <button onclick="retirarSaldo ()">Retirar dinero</button>
             </div>
-            </section>
-            <!-- OPCIONES CAJERO // VER SALDO -->
-            <section id="verSaldo" class="card">
-                <h2>Su saldo actual es:</h2>
-                <span id="saldoCliente"></span>
-                <div><button class="atras" onclick="atras()">volver</button></div>
-            </section>
+            <div><button class="cerrarSesion" onclick="cerrarSesion()">cerrar sesión</button></div>
+        </div>
+    </section>
+    <!-- OPCIONES CAJERO // VER SALDO -->
+    <section id="verSaldo" class="card">
+        <h2>Su saldo actual es:</h2>
+        <span id="saldoCliente"></span>
+        <div><button class="atras" onclick="atras()">volver</button></div>
+    </section>
 
-            <!-- OPCIONES CAJERO // AGREGAR SALDO -->
-            <section id="agregarSaldo" >
-                <h2>¿Cuánto dinero quiere ingresar?</h2>
-                <div class="saldoDiferente">
-                    <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
-                    <button class ="valida" onclick="ingresarSaldo()">validar ingreso</button>
-                </div>
-                <span class="mensajeError" id="alertaCupo"></span>
-                <!-- <span class="mensajeError" id="alertaOk"></span> -->
-                <!-- <div><button class="atras" onclick="atrasSaldo()">volver</button></div> -->
-                        </section>
+    <!-- OPCIONES CAJERO // AGREGAR SALDO -->
+    <section id="agregarSaldo">
+        <h2>¿Cuánto dinero quiere ingresar?</h2>
+        <div class="saldoDiferente">
+            <input type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
+            <button class="valida" onclick="ingresarSaldo()">validar ingreso</button>
+            <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
 
-                
-<!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
-<section id="saldoTotal" class="card">
-    <h2>Saldo Actual:</h2>
-    <span id="saldoIngresadoCliente">$</span>
-    <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
-</section>
+        </div>
+        <span class="mensajeError" id="alertaCupo"></span>
+        <!-- <span class="mensajeError" id="alertaOk"></span> -->
+        <!-- <div><button class="atras" onclick="atrasSaldo()">volver</button></div> -->
+    </section>
+
+
+    <!-- OPCIONES CAJERO // AGREGAR SALDO mostrar saldo ingresado-->
+    <section id="saldoTotal" class="card">
+        <h2>Saldo Actual:</h2>
+        <span id="saldoIngresadoCliente">$</span>
+        <div><button class="atras" onclick="atrasSaldo()">volver</button></div>
+    </section>
     <script src="script.js"></script>
-</section>
+    </section>
 
-<!-- OPCIONES CAJERO // RETIRAR SALDO -->
-<!-- <section id="retirarSaldo" class="card">
+    <!-- OPCIONES CAJERO // RETIRAR SALDO -->
+    <!-- <section id="retirarSaldo" class="card">
     <h3>¿Cuánto dineo quieres retirar?</h3>
     <div class="saldoDiferente">
         <input type="number" id="saldoIngresadoRetirar" placeholder="Ingresa un monto diferente" />
         <span class="mensajeError" id="alertaCupoRetiro"></span>
     </div>
     </section> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

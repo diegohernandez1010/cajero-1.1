@@ -127,6 +127,7 @@ const atras=()=>{
     document.getElementById("verSaldo").style.display = "none";
 
 
+
 }
 const cerrarSesion=()=>{
     document.getElementById("opcionesCajero").style.display = "none";
@@ -145,8 +146,10 @@ revisaSaldo (saldoIngresado);
     document.getElementById("agregarSaldo").style.display = "inherit";
     document.getElementById("opcionesCajero").style.display = "none";
 
+    document.getElementById("saldoIngresado").value="";
 
 }    
+
 
 
 
@@ -158,9 +161,9 @@ const atrasSaldo=()=>{
 }
 //ingreso de monto nuevo el agregar saldo
         const revisaSaldo =(saldoIngresado)=> {
-        let saldoNuevo= (parseInt(saldoIngresado)+parseInt(saldoActual));console.log(saldoNuevo);
-        saldoNuevo=(parseInt(saldoNuevo));
-        if(saldoNuevo >990)
+            let saldoNuevo=(parseInt(saldoIngresado));
+        // let saldoNuevo= (parseInt(saldoIngresado)+parseInt(saldoActual));console.log(saldoNuevo);
+                if(saldoNuevo >990)
                 {
                 const mensajeError = document.createTextNode ("Sobrepasa el monto permitido por el banco. Ingresa un valor inferior.");
         const mensajeUsuario = document.getElementById ("alertaCupo");
@@ -175,6 +178,7 @@ const atrasSaldo=()=>{
     
         }
 
+
    
 }
 
@@ -186,33 +190,27 @@ const mostrarTransacción =(saldoNuevo)=> {
     document.getElementById("agregarSaldo").style.display = "none";
     document.getElementById("saldoTotal").style.display = "none";
 
-     
+     let SaldoActualFinal= (saldoNuevo+saldoActual);
     
-    const dineroIngresado = document.createTextNode (`$${saldoNuevo}`)
+    const dineroIngresado = document.createTextNode (`$${SaldoActualFinal}`)
     const mostrarDinero = document.getElementById ("saldoIngresadoCliente");
     mostrarDinero.innerHTML = "";
     mostrarDinero.appendChild (dineroIngresado);
 
-    if(saldoNuevo==saldoNuevo){
+    if(SaldoActualFinal==SaldoActualFinal){
         document.getElementById("saldoTotal").style.display = "inherit";
     }
 
-    if(saldoActual<saldoNuevo){
+    if(saldoActual<SaldoActualFinal){
 
-        saldoActual=saldoNuevo;
+        saldoActual=SaldoActualFinal;
     }
     
-
+// document.getElementById(saldoNuevo).value=("");
 
 }
 
 // }
-const nuevoSaldoActual =()=>{
-saldoActual=saldoNuevo;
-console.log(Object.values(saldoActual));
-console.log(nuevoSaldoActual);
-}
-
 
 
 
