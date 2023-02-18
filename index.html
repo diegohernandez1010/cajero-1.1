@@ -39,9 +39,9 @@
     <!-- ingreso cajero -->
 
     <section id="opcionesCajero">
-        <div >
+        <div>
             <!-- <h2>¿Qué desea hacer hoy?</h2> -->
-            <div class="botonesOpciones" >
+            <div class="botonesOpciones">
                 <button class="btn btn-primary" onclick="verSaldo()">Ver saldo actual</button>
                 <button class="btn btn-primary" onclick="ingresarSaldo ()">Ingresar saldo</button>
                 <button class="btn btn-primary" onclick="retirarSaldo ()">Retirar dinero</button>
@@ -56,19 +56,21 @@
         <h2>Su saldo actual es:</h2>
         <span id="saldoCliente"></span>
         <div class="position-absolute top-50 start-50">
-            <button class="btn btn-primary" class="atras" onclick="atras()">volver</button></div>
+            <button class="btn btn-primary" class="atras" onclick="atras()">volver</button>
+        </div>
     </section>
 
     <!-- OPCIONES CAJERO // AGREGAR SALDO -->
     <section class="text-bg-dark p-3" id="agregarSaldo">
         <h2 class="mb-4">¿Cuánto dinero quiere ingresar?</h2>
         <div class="grid gap-3" class="saldoDiferente">
-            <input  class="p-2 g-col-6" class="input-group-text" type="number" id="saldoIngresado" placeholder="Ingresa un monto" />
-            <button  class="btn btn-primary" , class="valida" onclick="ingresarSaldo()">validar ingreso</button>
+            <input class="p-2 g-col-6" class="input-group-text" type="number" id="saldoIngresado"
+                placeholder="Ingresa un monto" />
+            <button class="btn btn-primary" , class="valida" onclick="ingresarSaldo()">validar ingreso</button>
         </div>
-            <div class="position-absolute top-50 start-50">
-                <button class="btn btn-primary btn-sm" class="atras" onclick="atrasSaldo()">volver</button>
-            </div>
+        <div class="position-absolute top-50 start-50">
+            <button class="btn btn-primary btn-sm" class="atras" onclick="atrasSaldo()">volver</button>
+        </div>
 
         <span class="mensajeError" id="alertaCupo"></span>
         <!-- <span class="mensajeError" id="alertaOk"></span> -->
@@ -84,22 +86,31 @@
             <button class="btn btn-primary btn-sm" class="atras" onclick="atrasSaldo()">volver</button>
         </div>
     </section>
-    <script src="script.js"></script>
+
     </section>
 
 
 
     <!-- OPCIONES CAJERO // RETIRAR SALDO -->
-    <!-- <section id="retirarSaldo" class="card">
-    <h3>¿Cuánto dineo quieres retirar?</h3>
-    <div class="saldoDiferente">
-        <input type="number" id="saldoIngresadoRetirar" placeholder="Ingresa un monto diferente" />
-        <span class="mensajeError" id="alertaCupoRetiro"></span>
-    </div>
-    </section> -->
+    <section id="retirarSaldo" class="text-bg-dark p-3" class="card">
+        <h3>¿Cuánto dineo quieres retirar?</h3>
+        <div class="saldoDiferente">
+            <input class="p-2 g-col-6" class="input-group-text" type="number" id="saldoIngresadoRetirar"
+                placeholder="Ingresa un valor" />
+            <button class="btn btn-primary" onclick="retirarSaldo ()">Retirar saldo</button>
+        </div>
+        <div>
+            <span class="mensajeError" id="alertaCupoRetiro"></span>
+        </div>
+        <div class="position-absolute top-50 start-50">
+            <button class="btn btn-primary btn-sm" class="atras" onclick="atrasRetiro()">volver</button>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

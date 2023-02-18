@@ -16,7 +16,7 @@ let usuarioActual;
 let saldoActual;
 let passwordActual;
 //fin globales.
-
+// console.log(saldoActual)
 //datos del usuario, guardar en variables globales.
 function mali() {
     usuarioActual = cuentas[0].nombre;
@@ -60,18 +60,11 @@ function paso(nombre) {         //validando informacion en las cuentas//
     let usuarioFinal = nombre;
     for (let i = 0; i < cuentas.length; i++) {
         if (usuarioFinal == cuentas[i].nombre) {
-            usuarioActual = cuentas[i].nombre
-            passwordActual = cuentas[i].contraseña
-            saldoActual = cuentas[i].saldo
-            // document.getElementById("Usuario").style.display ="none";
-            // document.getElementById("opcionesCajero").style.display = "inherit";
+            usuarioActual = cuentas[i].nombre;
+            passwordActual = cuentas[i].contraseña;
+            saldoActual = cuentas[i].saldo;
         }
-        //     else if (usuarioFinal==usuarioActual){
-        //         const correcto = document.createTextNode(`ok`);
-        //         const correctoFinal = document.getElementById("correctoUsuario");
-        // correctoFinal.innerHTML ="";
-        // correctoFinal.appendChild (correcto);
-        //   console.log(typeof usuarioFinal);
+        
     }
 }
 
@@ -115,13 +108,8 @@ const verSaldo = () => {//boton
     document.getElementById("verSaldo").style.display = "inherit";
     document.getElementById("opcionesCajero").style.display = "none";
     document.getElementById("verSaldo").style.display = "inherit";
+    
 }
-
-
-
-
-
-
 const atras = () => {
     document.getElementById("opcionesCajero").style.display = "inherit";
     document.getElementById("verSaldo").style.display = "none";
@@ -161,7 +149,7 @@ const atrasSaldo = () => {
 }
 //ingreso de monto nuevo el agregar saldo
 const revisaSaldo = (saldoIngresado) => {
-    let saldoNuevo = (parseInt(saldoIngresado));
+    let saldoNuevo = (parseInt(saldoIngresado));console.log(saldoNuevo);
     // let saldoNuevo= (parseInt(saldoIngresado)+parseInt(saldoActual));console.log(saldoNuevo);
     if (saldoNuevo > 990) {
         const mensajeError = document.createTextNode("Sobrepasa el monto permitido por el banco. Ingresa un valor inferior.");
@@ -195,7 +183,10 @@ const mostrarTransacción = (saldoNuevo) => {
     const mostrarDinero = document.getElementById("saldoIngresadoCliente");
     mostrarDinero.innerHTML = "";
     mostrarDinero.appendChild(dineroIngresado);
+    if(saldoActual>SaldoActualFinal){
 
+        saldoActual=saldoActual;
+    }
     if (SaldoActualFinal == SaldoActualFinal) {
         document.getElementById("saldoTotal").style.display = "inherit";
     }
@@ -204,12 +195,38 @@ const mostrarTransacción = (saldoNuevo) => {
 
         saldoActual = SaldoActualFinal;
     }
+    
+    console.log(saldoActual)
+    //retira saldo
+}
+document.getElementById("retirarSaldo").style.display = "none";
 
-    // document.getElementById(saldoNuevo).value=("");
+const retirarSaldo=()=>{//boton//
+    document.getElementById("retirarSaldo").style.display = "none";//display//
+    const saldoRetiradoIngresado= document.getElementById("saldoIngresadoRetirar");//input//
+saldoRetirado(saldoRetiradoIngresado);
+
+document.getElementById("opcionesCajero").style.display= "none";
+document.getElementById("saldoIngresadoRetirar").value="";
+document.getElementById("alertaCupoRetiro").innerHTML = "";
+document.getElementById("retirarSaldo").style.display = "inherit";
 
 }
-
+// const saldoRetirado=()=>{
+//     document.getElementById("opcionesCajero").style.display= "none";
+// document.getElementById("saldoIngresadoRetirar").value="";
+// document.getElementById("alertaCupoRetiro").innerHTML = "";
+// document.getElementById("retirarSaldo").style.display = "inherit";
 // }
+// Recibe el saldo ingresado por el cliente
+
+const atrasRetiro = () => {
+    document.getElementById("opcionesCajero").style.display = "inherit";
+    document.getElementById("retirarSaldo").style.display = "none";
 
 
-
+}
+console.log(saldoActual)
+const saldoRetirado=(saldoRetiradoIngresado)=>{
+let retiroNuevo= (parseInt(saldoRetiradoIngresado));console.log(retiroNuevo);
+}
